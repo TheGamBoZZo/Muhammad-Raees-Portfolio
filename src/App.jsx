@@ -8,6 +8,7 @@ import { Contact } from "@/sections/Contact";
 import { Footer } from "./layout/Footer";
 import { Education } from "./sections/Education";
 import { CertificationPage } from "@/certifications/CertificationPage";
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
@@ -43,6 +44,7 @@ function App() {
             <Education />
             <Contact />
           </main>
+          <Analytics />
           <Footer 
             onNavigateToCerts={() => handleNavigation("certifications")}
             onNavigateToSection={handleNavigation}
